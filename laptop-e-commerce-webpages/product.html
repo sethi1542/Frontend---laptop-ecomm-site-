@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - TechLaptops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-laptop"></i>
+                <span>TechLaptops</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="categories.html" class="nav-link">Categories</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details -->
+    <section class="product-details">
+        <div class="container">
+            <div class="product-layout">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="/placeholder.svg?height=400&width=500" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="/placeholder.svg?height=100&width=100" alt="Thumbnail 1" class="thumbnail active">
+                        <img src="/placeholder.svg?height=100&width=100" alt="Thumbnail 2" class="thumbnail">
+                        <img src="/placeholder.svg?height=100&width=100" alt="Thumbnail 3" class="thumbnail">
+                        <img src="/placeholder.svg?height=100&width=100" alt="Thumbnail 4" class="thumbnail">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="product-title">Gaming Laptop Pro X1</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">(4.5/5) - 128 reviews</span>
+                    </div>
+                    
+                    <div class="price-section">
+                        <span class="current-price" id="product-price">$1,299.99</span>
+                        <span class="original-price">$1,499.99</span>
+                        <span class="discount">Save $200</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>Experience ultimate gaming performance with the Gaming Laptop Pro X1. Featuring the latest Intel Core i7 processor, NVIDIA RTX 4060 graphics, and 16GB DDR5 RAM for seamless gaming and multitasking.</p>
+                    </div>
+                    
+                    <div class="product-specs">
+                        <h3>Key Specifications</h3>
+                        <ul>
+                            <li><strong>Processor:</strong> Intel Core i7-13700H</li>
+                            <li><strong>Graphics:</strong> NVIDIA GeForce RTX 4060 8GB</li>
+                            <li><strong>RAM:</strong> 16GB DDR5</li>
+                            <li><strong>Storage:</strong> 1TB NVMe SSD</li>
+                            <li><strong>Display:</strong> 15.6" FHD 144Hz</li>
+                            <li><strong>Weight:</strong> 2.3kg</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Configuration:</label>
+                            <select id="config-select">
+                                <option value="base">Base Model - $1,299.99</option>
+                                <option value="upgraded">Upgraded (32GB RAM) - $1,499.99</option>
+                                <option value="premium">Premium (32GB + 2TB SSD) - $1,799.99</option>
+                            </select>
+                        </div>
+                        
+                        <div class="quantity-section">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="changeQuantity(-1)">-</button>
+                                <input type="number" id="quantity" value="1" min="1" max="10">
+                                <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="add-to-cart-btn" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="buy-now-btn" onclick="buyNow()">
+                            <i class="fas fa-bolt"></i>
+                            Buy Now
+                        </button>
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="shipping-info">
+                        <div class="shipping-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over $500</span>
+                        </div>
+                        <div class="shipping-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day return policy</span>
+                        </div>
+                        <div class="shipping-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2-year warranty included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">Related Products</h2>
+            <div class="products-grid" id="related-products">
+                <!-- Related products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechLaptops</h3>
+                    <p>Your trusted partner for premium laptops and exceptional service.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html#gaming">Gaming</a></li>
+                        <li><a href="categories.html#business">Business</a></li>
+                        <li><a href="categories.html#ultrabook">Ultrabooks</a></li>
+                        <li><a href="categories.html#budget">Budget</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@techlaptops.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechLaptops. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
